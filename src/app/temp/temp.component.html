@@ -1,6 +1,25 @@
 
 <div class="container">
-  <div>
+   <div class="card">
+      <p-accordion [activeIndex]="0"  >
+      <p-accordionTab header="Temperature details ">
+            <p-table [value]="tableData">
+              <ng-template pTemplate="header">
+                <tr>
+                  <th>Date</th>
+                  <th>Average temperature (degree Celsius)</th>
+                  <th>Average temperature (degree Fahrenheit)</th>
+                </tr>
+              </ng-template>
+              <ng-template pTemplate="body" let-rowData>
+                <tr>
+                  <td> {{ rowData.date | date:'dd/MM/yyyy' }}</td>
+                  <td>{{ rowData.averageCelsius }}°C</td>
+                  <td>{{ rowData.fahrenheit }}°F</td>   
+                </tr>
+              </ng-template>
+            </p-table>
+             <div>
     <p-accordion [activeIndex]="0"  >
       <p-accordionTab header="MonthWise details ">
         <!-- <table>
@@ -26,33 +45,16 @@
         <th style="width: 300px;">{{monthfahrenheit}}°F</th>
       </tr>
     </table>
-    <div class="card">
-      <p-accordion [activeIndex]="0"  >
-      <p-accordionTab header="Temperature details ">
-            <p-table [value]="tableData">
-              <ng-template pTemplate="header">
-                <tr>
-                  <th>Date</th>
-                  <th>Average temperature (degree Celsius)</th>
-                  <th>Average temperature (degree Fahrenheit)</th>
-                </tr>
-              </ng-template>
-              <ng-template pTemplate="body" let-rowData>
-                <tr>
-                  <td> {{ rowData.date | date:'dd/MM/yyyy' }}</td>
-                  <td>{{ rowData.averageCelsius }}°C</td>
-                  <td>{{ rowData.fahrenheit }}°F</td>   
-                </tr>
-              </ng-template>
-            </p-table>
-      
-      </p-accordionTab>
-      </p-accordion>
-      </div>
+   
       </p-accordionTab>
     </p-accordion>
     
   </div>
+      
+      </p-accordionTab>
+      </p-accordion>
+      </div>
+ 
 
 
 
