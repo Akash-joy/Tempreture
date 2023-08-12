@@ -7,8 +7,8 @@
               <ng-template pTemplate="header">
                 <tr>
                   <th>Date</th>
-                  <th>Average temperature (degree Celsius)</th>
-                  <th>Average temperature (degree Fahrenheit)</th>
+                  <th>Average Temperature</th>
+                  <th>Average Temperature</th>
                 </tr>
               </ng-template>
               <ng-template pTemplate="body" let-rowData>
@@ -32,15 +32,15 @@
     <table>
       <tr>
        <th style="width: 300px;">Months</th>
-       <th style="width: 300px;">minimum celsius</th>
-       <th style="width: 300px;">Maximum celsius</th>
-       <th style="width: 300px;">Average celsius</th>
-       <th style="width: 300px;">Average in fahrenheit</th>
+       <th style="width: 300px;">minimum Temperature</th>
+       <th style="width: 300px;">Maximum Temperature</th>
+       <th style="width: 300px;">Average Temperature</th>
+       <th style="width: 300px;">Average Temperature</th>
       </tr>
       <tr>
         <th style="width: 300px;"><p-dropdown [options]="months" [(ngModel)]="selectedMonth" optionLabel="name" (ngModelChange)="onMonthSelect()"></p-dropdown></th>
-        <th style="width: 300px;">{{monthmin}}</th>
-        <th style="width: 300px;">{{monthmax}}</th>
+        <th style="width: 300px;">{{monthmin}}°C</th>
+        <th style="width: 300px;">{{monthmax}}°C</th>
         <th style="width: 300px;">{{monthavg}}°C</th>
         <th style="width: 300px;">{{monthfahrenheit}}°F</th>
       </tr>
